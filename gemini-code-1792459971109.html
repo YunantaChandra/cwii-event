@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Event Resmi - PT CWII</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <i class="fa-solid me-1 fa-calendar-check text-2xl text-blue-200"></i>
+                <div>
+                    <h1 class="font-bold text-lg leading-tight">Portal Event Karyawan</h1>
+                    <p class="text-xs text-blue-200">PT Combine Will Industrial Indonesia</p>
+                </div>
+            </div>
+            <span class="bg-blue-800 text-blue-100 text-xs px-3 py-1 rounded-full font-medium border border-blue-600">
+                <i class="fa-solid fa-shield-halved mr-1"></i> Internal Only
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
+        
+        <!-- Hero Banner Singkat -->
+        <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-2xl p-6 mb-8 text-white shadow-lg">
+            <h2 class="text-xl md:text-2xl font-bold mb-2">Selamat Datang di Hub Kegiatan PT CWII</h2>
+            <p class="text-sm text-blue-100">Silakan pilih kegiatan/event internal yang sedang aktif di bawah ini untuk melakukan pendaftaran online.</p>
+        </div>
+
+        <!-- SECTION 1: EVENT BERJALAN (ONGOING) -->
+        <section class="mb-10">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="relative flex h-3 w-3">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <h3 class="text-lg font-bold text-slate-800">Event Sedang Berlangsung (Ongoing)</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- CARD EVENT 1 (ACTIVE - FAMILY OPEN DAY) -->
+                <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-200 border border-emerald-200 overflow-hidden flex flex-col justify-between">
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">
+                                <i class="fa-solid fa-lock-open mr-1"></i> Pendaftaran Dibuka
+                            </span>
+                            <span class="text-xs text-slate-400">31 Okt 2026</span>
+                        </div>
+                        <h4 class="font-bold text-slate-800 text-base mb-1">Family Open Day PT CWII 2026</h4>
+                        <p class="text-xs text-slate-600 mb-4 line-clamp-2">Kegiatan khusus untuk anak karyawan kelas 4-6 SD. Kunjungan area pabrik dan aktivitas edukatif.</p>
+                        
+                        <div class="text-xs text-slate-500 space-y-1 mb-4">
+                            <p><i class="fa-regular fa-clock w-4 text-slate-400"></i> Batas: <strong>17 Oktober 2026</strong></p>
+                            <p><i class="fa-solid fa-user-group w-4 text-slate-400"></i> Kuota Terbatas (Khusus Anak Karyawan)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <!-- LINK TUNNEL CLOUDFLARE ANDA DI SINI -->
+                        <a href="https://facilities-thrown-democracy-air.trycloudflare.com" 
+                           target="_blank" 
+                           class="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow-sm transition duration-150 text-sm">
+                            Buka Form Pendaftaran <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CARD EVENT TEMPLATE (TETAP / CONTOH JIKA ADA EVENT LAIN) -->
+                <!-- Tinggal Duplicate Card Ini Jika Ada Event Baru -->
+
+            </div>
+        </section>
+
+        <!-- SECTION 2: EVENT SELESAI / ARCHIVE -->
+        <section>
+            <div class="flex items-center space-x-2 mb-4">
+                <i class="fa-solid fa-box-archive text-slate-400"></i>
+                <h3 class="text-lg font-bold text-slate-700">Event Yang Telah Selesai</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+                <!-- CARD EVENT SELESAI 1 -->
+                <div class="bg-white rounded-xl border border-slate-200 opacity-75 overflow-hidden flex flex-col justify-between">
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <span class="bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-md">
+                                <i class="fa-solid fa-lock mr-1"></i> Ditutup
+                            </span>
+                            <span class="text-xs text-slate-400">17 Agu 2026</span>
+                        </div>
+                        <h4 class="font-bold text-slate-700 text-base mb-1">Lomba HUT RI ke-81 PT CWII</h4>
+                        <p class="text-xs text-slate-500 mb-4">Rangkaian lomba keakraban antar departemen dan jalan sehat bersama karyawan.</p>
+                    </div>
+                    
+                    <div class="p-4 bg-slate-50 border-t border-slate-100">
+                        <button disabled class="w-full text-center bg-slate-200 text-slate-500 font-medium py-2 px-4 rounded-lg cursor-not-allowed text-sm">
+                            Pendaftaran Ditutup
+                        </button>
+                    </div>
+                </div>
+
+                <!-- CARD EVENT SELESAI 2 -->
+                <div class="bg-white rounded-xl border border-slate-200 opacity-75 overflow-hidden flex flex-col justify-between">
+                    <div class="p-5">
+                        <div class="flex justify-between items-start mb-2">
+                            <span
