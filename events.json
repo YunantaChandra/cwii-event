@@ -28,5 +28,25 @@
     "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk karyawan & anak karyawan.",
     "status": "active",
     "link": "https://facilities-thrown-democracy-air.trycloudflare.com"
+  },
+  {
+    "id": 4,
+    "title": "Family Open Day PT CWII 2026",
+    "date": "24 Okt 2026",
+    "deadline": "17 Oktober 2026",
+    "quota": "Khusus Karyawan & Anak Karyawan (Kelas 4-6 SD)",
+    "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk karyawan & anak karyawan.",
+    "status": "active",
+    "link": "https://facilities-thrown-democracy-air.trycloudflare.com"
+  },
+  {
+    "id": 5,
+    "title": "Family Open Day PT CWII 2026",
+    "date": "24 Okt 2026",
+    "deadline": "17 Oktober 2026",
+    "quota": "Khusus Karyawan & Anak Karyawan (Kelas 4-6 SD)",
+    "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk karyawan & anak karyawan.",
+    "status": "active",
+    "link": "https://facilities-thrown-democracy-air.trycloudflare.com"
   }
 ]
