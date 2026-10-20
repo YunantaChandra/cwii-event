@@ -28,7 +28,7 @@
     "description": "Goes to Solo Safari",
     "status": "closed",
     "link": "#"
-  }
+  },
   {
     "id": 4,
     "title": "Test event 4",
@@ -38,5 +38,5 @@
     "description": "Kegiatan bla bla bla.",
     "status": "active",
     "link": "#"
-  },
+  }
 ]
