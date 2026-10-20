@@ -31,12 +31,12 @@
   }
   {
     "id": 4,
-    "title": "Family Open Day PT CWII 20526",
+    "title": "Test event 4",
     "date": "24 Okt 2026",
     "deadline": "17 Oktober 2026",
-    "quota": "Khusus Karyawan & Anak Karyawan (Kelas 4-6 SD)",
-    "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk karyawan & anak karyawan.",
+    "quota": "Khusus Karyawan ",
+    "description": "Kegiatan bla bla bla.",
     "status": "active",
-    "link": "https://facilities-thrown-democracy-air.trycloudflare.com"
+    "link": "#"
   },
 ]
