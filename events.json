@@ -1,11 +1,11 @@
 [
   {
     "id": 1,
-    "title": "Family Open Day PT CWII 20266",
-    "date": "31 Okt 2026",
+    "title": "Family Open Day PT CWII 2026",
+    "date": "24 Okt 2026",
     "deadline": "17 Oktober 2026",
-    "quota": "Khusus Anak Karyawan (Kelas 4-6 SD)",
-    "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk anak karyawan.",
+    "quota": "Khusus Karyawan & Anak Karyawan (Kelas 4-6 SD)",
+    "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk karyawan & anak karyawan.",
     "status": "active",
     "link": "https://facilities-thrown-democracy-air.trycloudflare.com"
   },
@@ -15,17 +15,17 @@
     "date": "17 Agu 2026",
     "deadline": "15 Agustus 2026",
     "quota": "Seluruh Karyawan",
-    "description": "Rangkaian lomba keakraban antar departemen dan jalan sehat bersama.",
+    "description": "Rangkaian lomba antar departemen, DLL.",
     "status": "closed",
     "link": "#"
   },
   {
     "id": 3,
-    "title": "Donor Darah Perusahaan Q2",
-    "date": "10 Jun 2026",
-    "deadline": "8 Juni 2026",
-    "quota": "Umum / Karyawan",
-    "description": "Bakti sosial donor darah rutin bekerjasama dengan PMI.",
+    "title": "Family Fun Day PT CWII 2026 ",
+    "date": "4 Okt 2026",
+    "deadline": "27 Sep 2026",
+    "quota": "Karyawan & Keluarga Karyawan",
+    "description": "Goes to Solo Safari",
     "status": "closed",
     "link": "#"
   }
