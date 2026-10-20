@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Event Resmi - PT CWII</title>
-    <!-- Tailwind CSS CDN untuk styling modern -->
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Font Awesome Icons untuk ikon-ikon pendukung -->
+    <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Eksternal (Opsional / Custom tambahan) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 min-h-screen flex flex-col justify-between">
 
-    <!-- ========================================== -->
-    <!-- BAGIAN 1: HEADER / NAVBAR ATAS             -->
-    <!-- ========================================== -->
+    <!-- HEADER / NAVBAR -->
     <header class="bg-blue-700 text-white shadow-md sticky top-0 z-50">
         <div class="max-w-4xl mx-auto px-4 py-4 flex items-center justify-between">
-            <!-- Logo & Judul Instansi -->
             <div class="flex items-center space-x-3">
                 <i class="fa-solid fa-calendar-check text-2xl text-blue-200"></i>
                 <div>
@@ -24,16 +23,13 @@
                     <p class="text-xs text-blue-200">PT Combine Will Industrial Indonesia</p>
                 </div>
             </div>
-            <!-- Badge Status Akses -->
             <span class="bg-blue-800 text-blue-100 text-xs px-3 py-1 rounded-full font-medium border border-blue-600">
                 <i class="fa-solid fa-shield-halved mr-1"></i> Internal Only
             </span>
         </div>
     </header>
 
-    <!-- ========================================== -->
-    <!-- BAGIAN 2: KONTEN UTAMA (MAIN CONTAINER)    -->
-    <!-- ========================================== -->
+    <!-- MAIN CONTENT -->
     <main class="max-w-4xl mx-auto px-4 py-8 w-full flex-grow">
         
         <!-- Banner Sambutan -->
@@ -42,9 +38,7 @@
             <p class="text-sm text-blue-100">Silakan pilih kegiatan/event internal yang sedang aktif di bawah ini untuk melakukan pendaftaran online.</p>
         </div>
 
-        <!-- ------------------------------------------ -->
-        <!-- SUB-BAGIAN A: EVENT AKTIF (ONGOING)        -->
-        <!-- ------------------------------------------ -->
+        <!-- SECTION 1: EVENT AKTIF (ONGOING) -->
         <section class="mb-10">
             <div class="flex items-center space-x-2 mb-4">
                 <span class="relative flex h-3 w-3">
@@ -53,137 +47,33 @@
                 </span>
                 <h3 class="text-lg font-bold text-slate-800">Event Sedang Berlangsung (Ongoing)</h3>
             </div>
-            <!-- Tempat JavaScript merender card event aktif secara otomatis -->
+            <!-- Tempat card event aktif dimuat otomatis oleh script.js -->
             <div id="ongoing-events" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </section>
 
-        <!-- ------------------------------------------ -->
-        <!-- SUB-BAGIAN B: EVENT SELESAI / ARSIP (CLOSED) -->
-        <!-- ------------------------------------------ -->
+        <!-- SECTION 2: EVENT ARSIP (CLOSED) -->
         <section>
             <div class="flex items-center space-x-2 mb-4">
                 <i class="fa-solid fa-box-archive text-slate-400"></i>
                 <h3 class="text-lg font-bold text-slate-700">Event Yang Telah Selesai</h3>
             </div>
-            <!-- Tempat JavaScript merender card event arsip secara otomatis -->
+            <!-- Tempat card event arsip dimuat otomatis oleh script.js -->
             <div id="closed-events" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
         </section>
 
     </main>
 
-    <!-- ========================================== -->
-    <!-- BAGIAN 3: FOOTER BAWAHAN                   -->
-    <!-- ========================================== -->
+    <!-- FOOTER -->
     <footer class="bg-white border-t border-slate-200 py-6 mt-12">
         <div class="max-w-4xl mx-auto px-4 text-center text-xs text-slate-500 space-y-1.5">
-            <p class="font-semibold text-slate-700">PT Combine Will Industrial Indonesia</p>
+            <p class="font-semibold text-slate-700">Portal Pendaftaran Event & Kegiatan Internal PT Combine Will Industrial Indonesia</p>
             <p class="text-slate-500 flex items-center justify-center gap-1">
                 Made with <span class="text-red-500 animate-pulse">❤️</span> by <strong>IT Team CWII</strong>
             </p>
-            <p class="text-slate-400 text-[11px]">Portal Resmi Pendaftaran Event & Kegiatan Internal</p>
         </div>
     </footer>
 
-    <!-- ========================================== -->
-    <!-- BAGIAN 4: JAVASCRIPT LOGIKA UTAMA          -->
-    <!-- ========================================== -->
-    <script>
-        // Fungsi utama untuk mengambil data dari events.json dan menampilkannya ke layar
-        async function loadEvents() {
-            try {
-                // Mengambil file events.json dengan parameter waktu (?nocache=...) agar data langsung ter-update real-time tanpa nyangkut di cache browser
-                const response = await fetch('events.json?nocache=' + Date.now(), {
-                    headers: {
-                        'Cache-Control': 'no-cache, no-store, must-revalidate',
-                        'Pragma': 'no-cache',
-                        'Expires': '0'
-                    }
-                });
-                
-                const events = await response.json();
-
-                // Menangkap elemen wadah berdasarkan ID HTML di atas
-                const ongoingContainer = document.getElementById('ongoing-events');
-                const closedContainer = document.getElementById('closed-events');
-
-                // Kosongkan kontainer sebelum diisi ulang
-                ongoingContainer.innerHTML = '';
-                closedContainer.innerHTML = '';
-
-                // Looping (perulangan) membaca setiap data event di dalam file JSON
-                events.forEach(event => {
-                    
-                    // KONDISI 1: JIKA STATUS EVENT "active" (SEDANG DIBUKA)
-                    if (event.status === 'active') {
-                        ongoingContainer.innerHTML += `
-                            <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition duration-200 border border-emerald-200 overflow-hidden flex flex-col justify-between">
-                                <div class="p-5">
-                                    <div class="flex justify-between items-start mb-2">
-                                        <span class="bg-emerald-100 text-emerald-800 text-xs font-bold px-2.5 py-1 rounded-md">
-                                            <i class="fa-solid fa-lock-open mr-1"></i> Pendaftaran Dibuka
-                                        </span>
-                                        <span class="text-xs text-slate-400">${event.date}</span>
-                                    </div>
-                                    <h4 class="font-bold text-slate-800 text-base mb-1">${event.title}</h4>
-                                    <p class="text-xs text-slate-600 mb-4 line-clamp-2">${event.description}</p>
-                                    
-                                    <!-- Informasi Detail (Deadline & Quota) -->
-                                    <div class="text-xs text-slate-500 space-y-1 mb-4">
-                                        <p><i class="fa-regular fa-clock w-4 text-slate-400"></i> Batas: <strong>${event.deadline}</strong></p>
-                                        <p><i class="fa-solid fa-user-group w-4 text-slate-400"></i> ${event.quota}</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Tombol Aksi Pendaftaran -->
-                                <div class="p-4 bg-slate-50 border-t border-slate-100">
-                                    <a href="${event.link}" target="_blank" 
-                                       class="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow-sm transition duration-150 text-sm">
-                                        Buka Form Pendaftaran <i class="fa-solid fa-arrow-right ml-1"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        `;
-                    } 
-                    
-                    // KONDISI 2: JIKA STATUS EVENT "closed" (SELESAI / ARSIP)
-                    else {
-                        closedContainer.innerHTML += `
-                            <div class="bg-white rounded-xl border border-slate-200 opacity-75 overflow-hidden flex flex-col justify-between">
-                                <div class="p-5">
-                                    <div class="flex justify-between items-start mb-2">
-                                        <span class="bg-slate-100 text-slate-600 text-xs font-semibold px-2.5 py-1 rounded-md">
-                                            <i class="fa-solid fa-lock mr-1"></i> Ditutup
-                                        </span>
-                                        <span class="text-xs text-slate-400">${event.date}</span>
-                                    </div>
-                                    <h4 class="font-bold text-slate-700 text-base mb-1">${event.title}</h4>
-                                    <p class="text-xs text-slate-500 mb-3">${event.description}</p>
-                                    
-                                    <!-- Informasi Detail (Deadline & Quota) yang ikut dimunculkan di Arsip -->
-                                    <div class="text-xs text-slate-400 space-y-1 mb-4 border-t border-slate-100 pt-2">
-                                        <p><i class="fa-regular fa-clock w-4 text-slate-400"></i> Batas: <strong>${event.deadline}</strong></p>
-                                        <p><i class="fa-solid fa-user-group w-4 text-slate-400"></i> ${event.quota}</p>
-                                    </div>
-                                </div>
-                                
-                                <!-- Tombol Status Berakhir (Disabled) -->
-                                <div class="p-4 bg-slate-50 border-t border-slate-100">
-                                    <button disabled class="w-full text-center bg-slate-200 text-slate-500 font-medium py-2 px-4 rounded-lg cursor-not-allowed text-sm">
-                                        Pendaftaran Ditutup
-                                    </button>
-                                </div>
-                            </div>
-                        `;
-                    }
-                });
-
-            } catch (error) {
-                console.error('Gagal memuat data event:', error);
-            }
-        }
-
-        // Jalankan fungsi otomatis saat halaman dibuka oleh browser
-        loadEvents();
-    </script>
+    <!-- JavaScript Eksternal -->
+    <script src="script.js"></script>
 </body>
 </html>
