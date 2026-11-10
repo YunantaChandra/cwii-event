@@ -28,5 +28,15 @@
     "description": "Kegiatan kunjungan area pabrik dan aktivitas edukatif untuk karyawan & anak karyawan.",
     "status": "active",
     "link": "https://facilities-thrown-democracy-air.trycloudflare.com"
+  },
+  {
+    "id": 4,
+    "title": "Foto Selfie - Hari Ayah Nasional",
+    "date": "12 Nov 2026",
+    "deadline": "31 Nov 2026",
+    "quota": "Karyawan PT.CWII",
+    "description": "-",
+    "status": "active",
+    "link": "https://considering-sim-phrase-wonderful.trycloudflare.com"
   }
 ]
