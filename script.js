@@ -43,7 +43,7 @@ async function loadEvents() {
                         <div class="p-4 bg-slate-50 border-t border-slate-100">
                             <a href="${event.link}" target="_blank" 
                                class="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow-sm transition duration-150 text-sm">
-                                Buka Form Pendaftaran <i class="fa-solid fa-arrow-right ml-1"></i>
+                                Buka Form <i class="fa-solid fa-arrow-right ml-1"></i>
                             </a>
                         </div>
                     </div>
